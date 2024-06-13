@@ -7,6 +7,8 @@ public class movement : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody2D rigidbody2D;
+    public KeyCode upKey;
+    public KeyCode DownKey;
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -16,12 +18,12 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.W))
+        if (Input.GetKey(upKey))
         {
             rigidbody2D.velocity = Vector2.up;
 
         }
-        if (Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKey(DownKey))
         {
             rigidbody2D.velocity = Vector2.down;
 
